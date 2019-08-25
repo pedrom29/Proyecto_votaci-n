@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  political_party: MyString
+  birthdate: 2019-08-21
+  district: one
+
+two:
+  name: MyString
+  political_party: MyString
+  birthdate: 2019-08-21
+  district: two

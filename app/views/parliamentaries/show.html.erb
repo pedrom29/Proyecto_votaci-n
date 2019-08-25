@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @parliamentary.name %>
+</p>
+
+<p>
+  <strong>Political party:</strong>
+  <%= @parliamentary.political_party %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @parliamentary.birthdate %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @parliamentary.district %>
+</p>
+
+<%= link_to 'Edit', edit_parliamentary_path(@parliamentary) %> |
+<%= link_to 'Back', parliamentaries_path %>
