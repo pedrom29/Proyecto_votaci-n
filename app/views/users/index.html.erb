@@ -9,21 +9,24 @@
 <body>
     
 
-    <table class="table">
-        <% @user.each do |u| %>
+    <table class="table text-center">
+        <% @users.each do |u| %>
             <tr>
-                <th>Rol</th> 
                 <th>Nombre</th> 
+                <th>Apellido</th>
                 <th>Email</th>
-                <th>Comuna</th>
+                <th>Rol</th>
+                <th>Comuna</th>                
+                <th colspan="5"></th>
             </tr>
             <br>
 
             <tr>
-                <td><%= u.role %></td>
+                <td><%= u.name %></td>
                 <td><%= u.lastname %></td>
                 <td><%= u.email %></td>
-                <td><%= District.pluck(:name) %></td>
+                <td><%= u.role %></td>                
+                <td><%= u.district_id %></td>  
              </tr>
         <% end %>
     </table>

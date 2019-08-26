@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
   
   def index
-    @user = User.all
+    @users = User.all
   end
   
+  def district
+    district = District.find(params[:district_id]) 
+  end
 
 
 

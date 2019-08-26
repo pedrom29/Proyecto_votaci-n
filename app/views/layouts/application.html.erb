@@ -11,7 +11,7 @@
   </head>  
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="<%= districts_path %>">Home</a>
+    <a class="navbar-brand" href="<%= root_path %>">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,18 +23,24 @@
         <% if user_signed_in? %>  
 
           <% if current_user.admin? %>
-				  <li class="nav-item active">            
-            <a class="nav-link" href="<%= districts_path %>">Distritos</a>
-          </li>
+            <li class="nav-item active">            
+             <a class="nav-link" href="<%= districts_path %>">Distritos</a>
+            </li>
 
-           <li class="nav-item active">            
-            <a class="nav-link" href="<%= users_path %>">Usuarios</a>
-          </li>
+            <li class="nav-item active">            
+              <a class="nav-link" href="<%= users_path %>">Usuarios</a>
+            </li>
+
+            <li class="nav-item active">            
+              <a class="nav-link" href="<%= parliamentaries_path %>">Diputados</a>
+            </li>
+
+            
+				  <% end %>
 
           <li class="nav-item active">            
-            <a class="nav-link" href="#">Panel de control</a>
-          </li>         
-				  <% end %>
+              <a class="nav-link" href="<%= users_dashboard_path %>">Cuenta</a>
+            </li>   
 
           <li class="nav-item">                     
             <%= link_to('Cerrar Sesión', destroy_user_session_path, method: :delete, class: 'nav-link') %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'users/index'
+  get 'users/dashboard'
+  get 'users/home'
+
   resources :parliamentaries
   resources :districts
   
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
     }
 
    resources :users
+
+   root 'users#home'
    
  
 

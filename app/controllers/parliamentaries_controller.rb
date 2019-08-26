@@ -7,6 +7,10 @@ class ParliamentariesController < ApplicationController
     @parliamentaries = Parliamentary.all
   end
 
+  def district
+    district = District.find(params[:district_id]) 
+  end
+
   # GET /parliamentaries/1
   # GET /parliamentaries/1.json
   def show
