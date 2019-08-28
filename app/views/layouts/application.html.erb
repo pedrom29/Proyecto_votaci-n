@@ -38,9 +38,11 @@
             
 				  <% end %>
 
-          <li class="nav-item active">            
+           <% if current_user.voter? %>
+            <li class="nav-item active">            
               <a class="nav-link" href="<%= users_dashboard_path %>">Cuenta</a>
             </li>   
+          <% end %>
 
           <li class="nav-item">                     
             <%= link_to('Cerrar Sesión', destroy_user_session_path, method: :delete, class: 'nav-link') %>

@@ -10,13 +10,15 @@
     
 
     <table class="table text-center">
+
         <% @users.each do |u| %>
             <tr>
                 <th>Nombre</th> 
                 <th>Apellido</th>
                 <th>Email</th>
                 <th>Rol</th>
-                <th>Comuna</th>                
+                <th>Comuna</th>
+                            
                 <th colspan="5"></th>
             </tr>
             <br>
@@ -27,7 +29,9 @@
                 <td><%= u.email %></td>
                 <td><%= u.role %></td>                
                 <td><%= u.district_id %></td>  
+
              </tr>
+
         <% end %>
     </table>
     

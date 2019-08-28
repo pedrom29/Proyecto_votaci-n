@@ -23,13 +23,15 @@
 
   <div class="field">
     <%= form.label :birthdate %>
-    <%= form.date_select :birthdate %>
+    <%= form.date_select :birthdate, start_year: 1940, end_year: Date.today.year - 18 %>
   </div>
 
   <div class="field">
-    <%= form.label :district_id %>
-    <%= form.text_field :district_id %>
+    <%= form.label :Región %>
+    <%= form.select :district_id, District.pluck(:name, :id) %>
   </div>
+
+  
 
   <div class="actions">
     <%= form.submit %>
