@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/dashboard'
   get 'users/home'
+  get 'users/profile'
+
 
   resources :parliamentaries
   resources :districts
