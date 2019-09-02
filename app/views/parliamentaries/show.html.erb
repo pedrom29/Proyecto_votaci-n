@@ -11,13 +11,13 @@
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
+  <strong>Fecha de nacimiento:</strong>
   <%= @parliamentary.birthdate %>
 </p>
 
 <p>
   <strong>District:</strong>
-  <%= @parliamentary.district %>
+  <%= @parliamentary.district.name %>
 </p>
 
 <%= link_to 'Edit', edit_parliamentary_path(@parliamentary) %> |

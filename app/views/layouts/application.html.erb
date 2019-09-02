@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Inicio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -32,16 +32,18 @@
                   <a class="dropdown-item" href="<%= users_path %>">Usuarios</a>
                   <a class="dropdown-item" href="<%= parliamentaries_path %>">Diputados</a>
                   <a class="dropdown-item" href="<%= districts_path %>">Distritos</a>
+                  <a class="dropdown-item" href="#">Votaciones</a>
                 </div>
             </li>
+
                      
 				  <% end %>
 
-           <% if current_user.voter? %>
+          <% if current_user.voter? %>
             <li class="nav-item active">            
               <a class="nav-link" href="<%= users_profile_path %>">Cuenta</a>
-            </li>   
-            <% end %>
+            </li> 
+          <% end %>
 
           <li class="nav-item">                     
             <%= link_to('Cerrar Sesión', destroy_user_session_path, method: :delete, class: 'nav-link') %>
