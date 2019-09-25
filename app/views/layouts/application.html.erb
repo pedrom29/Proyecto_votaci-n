@@ -24,11 +24,13 @@
         <ul class="navbar-nav"> 
 
           <% if current_user.admin? %>
+            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="<%= users_dashboard_path %>" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   Panel de control
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="<%= new_admin_user_session_path %>">Administrar</a>
                   <a class="dropdown-item" href="<%= users_path %>">Usuarios</a>
                   <a class="dropdown-item" href="<%= parliamentaries_path %>">Diputados</a>
                   <a class="dropdown-item" href="<%= districts_path %>">Distritos</a>

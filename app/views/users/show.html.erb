@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Lastname:</strong>
+    <%= @user.lastname %>
+  </p>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @user.lastname %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p>
+    <strong>District:</strong>
+    <%= @user.district.name %>
+  </p>
 
-<p>
-  <strong>District:</strong>
-  <%= @user.district.name %>
-</p>
 
-<%= link_to 'Editar', edit_user_path(@user) %> |
-<%= link_to 'Atrás', users_path %>
+  <%= link_to 'Atrás', users_path %>
+</div>

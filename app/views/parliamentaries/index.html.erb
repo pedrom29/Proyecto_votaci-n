@@ -20,9 +20,9 @@
         <td><%= parliamentary.political_party %></td>
         <td><%= parliamentary.birthdate %></td>
         <td><%= parliamentary.district.name %></td>
-        <td><%= link_to 'Show', parliamentary %></td>
-        <td><%= link_to 'Edit', edit_parliamentary_path(parliamentary) %></td>
-        <td><%= link_to 'Destroy', parliamentary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', parliamentary %></td>
+        <td><%= link_to 'Editar', edit_parliamentary_path(parliamentary) %></td>
+        <td><%= link_to 'Eliminar', parliamentary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

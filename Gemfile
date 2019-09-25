@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.3'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
 gem 'rails-i18n', '~> 5.1'
+gem 'activeadmin'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
